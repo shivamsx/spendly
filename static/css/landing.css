@@ -194,6 +194,61 @@
 .bar-travel { background: #3d82ec; }
 .bar-bills  { background: #7059e0; }
 
+/* "See how it works" video modal */
+
+.how-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(15, 15, 15, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.how-modal[hidden] { display: none; }
+
+.how-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+}
+
+.how-modal-close {
+    position: absolute;
+    top: -2.75rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.how-modal-close:hover { opacity: 1; }
+
+.how-modal-video {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.how-modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* Responsive */
 
 @media (max-width: 700px) {
