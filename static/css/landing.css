@@ -1,0 +1,206 @@
+/* ------------------------------------------------------------------ */
+/* Landing hero (centered redesign)                                    */
+/* ------------------------------------------------------------------ */
+
+.hero-main {
+    --hero-green: #17a05c;
+    --hero-green-soft: #e5f3ea;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Badge pill */
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--hero-green-soft);
+    color: var(--hero-green);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.hero-pill-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: var(--hero-green);
+}
+
+/* Headline */
+
+.hero-heading {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #161616;
+    margin-bottom: 1.5rem;
+}
+
+.hero-heading-accent {
+    color: var(--hero-green);
+}
+
+/* Subtitle */
+
+.hero-sub {
+    font-size: 1.15rem;
+    color: #757575;
+    line-height: 1.6;
+    max-width: 540px;
+    margin-bottom: 2.25rem;
+}
+
+/* CTA buttons */
+
+.hero-cta-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+}
+
+.hero-btn-dark {
+    display: inline-block;
+    background: #141414;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+
+.hero-btn-dark:hover {
+    background: #2d2d2d;
+}
+
+/* Dashboard mockup */
+
+.hero-dash {
+    width: 100%;
+    max-width: 820px;
+    background: #f3f3f0;
+    border-radius: 18px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    box-shadow: 0 20px 50px rgba(15, 15, 15, 0.08);
+    text-align: left;
+}
+
+.hero-dash-dots {
+    display: flex;
+    gap: 0.45rem;
+    margin-bottom: 1.1rem;
+}
+
+.dash-dot {
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 999px;
+}
+
+.dash-dot-red    { background: #ef7a8b; }
+.dash-dot-yellow { background: #f0b743; }
+.dash-dot-green  { background: #7ed09a; }
+
+/* Stat cards */
+
+.hero-dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dash-stat-card {
+    background: #ffffff;
+    border: 1px solid #ececea;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.dash-stat-label {
+    font-size: 0.82rem;
+    color: #9a9a9a;
+}
+
+.dash-stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #161616;
+    letter-spacing: -0.01em;
+}
+
+.dash-stat-delta { font-size: 0.8rem; font-weight: 500; }
+
+.delta-down  { color: #e1485e; }
+.delta-up    { color: var(--hero-green, #17a05c); }
+.delta-muted { color: #b0b0b0; font-weight: 400; }
+
+/* Category bars */
+
+.hero-dash-bars {
+    background: #ffffff;
+    border: 1px solid #ececea;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.dash-bar-row {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dash-bar-label {
+    font-size: 0.85rem;
+    color: #5c5c5c;
+    text-align: right;
+}
+
+.dash-bar-track {
+    height: 0.55rem;
+    background: #ececea;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.dash-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-food   { background: #e8a53a; }
+.bar-travel { background: #3d82ec; }
+.bar-bills  { background: #7059e0; }
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .hero-main { padding: 3rem 1.25rem 3.5rem; }
+
+    .hero-dash-stats { grid-template-columns: 1fr; }
+
+    .hero-cta-row { flex-direction: column; width: 100%; max-width: 320px; }
+    .hero-btn-dark { text-align: center; }
+}
